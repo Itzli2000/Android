@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Intro Slider</string>
+    <string name="Weather">Clima</string>
+    <string name="games">Juegos</string>
+    <string name="games_text">Juegos nuevos en todo momento</string>
+    <string name="video">Videos HD</string>
+    <string name="video_text">Videos, peliculas y más. Todo en alta definición!!!</string>
+    <string name="social_net">Redes sociales</string>
+    <string name="social_net_text">Unete a nuestra red y conecta con personas alrededor del mundo</string>
+    <string name="travel">Viaja</string>
+    <string name="travel_text">Visita y conoce lugares, que nunca imagnaste podían existir</string>
+    <string name="next">Siguiente</string>
+    <string name="skip">Saltar</string>
+    <string name="start">¡Listo!</string>
+    <string name="Weather_text">Clima en todo momento y lugar.</string>
+</resources>
