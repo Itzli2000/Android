@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Prueba con Firebase</string>
+    <string name="Login">Ingresa!!</string>
+    <string name="sign_out">Salir</string>
+    <string name="fresh_config">Actualizar configuración</string>
+    <string name="invite_menu_label">Invita amigos</string>
+    <string name="cause_crash">Crash</string>
+    <string name="signin_text">Ingresa!!</string>
+    <string name="sendButton_Text">Enviar</string>
+</resources>
