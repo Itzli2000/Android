@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DabbaWala</string>
+    <string name="title_activity_referencia">ReferenciaActivity</string>
+    <string name="deliveryman">REPARTIDOR</string>
+    <string name="delivery_login">Ingresa a tu perfil</string>
+    <string name="delivery_session_text">Inicia Sesión</string>
+    <string name="toolbar_deliver_id">Perfil de repartidor</string>
+</resources>
