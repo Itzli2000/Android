@@ -49,6 +49,7 @@
                 android:id="@+id/deliverman_id"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:divider="@null"
                 android:background="@color/colorPrimaryDark">
 
             </ListView>

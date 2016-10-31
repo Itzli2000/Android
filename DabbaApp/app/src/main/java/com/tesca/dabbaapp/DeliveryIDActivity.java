@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 public class DeliveryIDActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +22,16 @@ public class DeliveryIDActivity extends AppCompatActivity {
         showToolbar(getResources().getString(R.string.toolbar_deliver_id),true);
 
         deliver_list();
+        deliverID();
+    }
+
+    private void deliverID() {
+        //Datos del repartidor
+        String [] id_deliver = {"Nombre: ", "ID Empleado: "};
+        //Mostrar los datos del repartidor
+        ListAdapter adapterid = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, id_deliver);
+        ListView listview = (ListView) findViewById(R.id.deliverman_id);
+        listview.setAdapter(adapterid);
     }
 
     public void showToolbar (String tittle, boolean upButton){
