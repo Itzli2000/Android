@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DeliveryMainActivity">
+        <activity android:name=".DeliverMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,18 +17,27 @@
         </activity>
 
         //Jerarquia padre para DeliveryID
-        <activity android:name=".DeliveryIDActivity"
-            android:parentActivityName=".DeliveryMainActivity">
+        <activity
+            android:name=".DeliverIDActivity"
+            android:parentActivityName=".DelivermanLoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DelivermanLoginActivity" />
+        </activity>
+
+        <activity android:name=".DelivermanLoginActivity"
+            android:parentActivityName=".DeliverMainActivity">
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".DeliveryMainActivity"/>
-        </activity>
+                android:value=".DeliverMainActivity" />
 
-            <activity
+        </activity>
+        <activity
             android:name=".ReferenciaActivity"
             android:label="@string/title_activity_referencia"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DelivermanLoginActivity"></activity>
     </application>
 
 </manifest>

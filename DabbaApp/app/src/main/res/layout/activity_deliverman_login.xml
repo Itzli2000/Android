@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_deliverman_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorLightPrimary"
+    tools:context="com.tesca.dabbaapp.DelivermanLoginActivity"
+    >
+
+    <include layout="@layout/actionbar_toolbar"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/deliverman_login"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/deliverman_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="0.6"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/deliver_login_text"
+                android:textStyle="bold"
+                android:textSize="35dp"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+        <Button
+            android:id="@+id/googleID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Google"
+            android:onClick="goGoogleid"
+            android:theme="@style/RaisedButtonDark"/>
+
+        <Button
+            android:id="@+id/faceID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Facebook"
+            android:onClick="goFacebookid"
+            android:theme="@style/RaisedButtonDark"
+            />
+
+        <Button
+            android:id="@+id/twitterID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Twitter"
+            android:onClick="goTwitterid"
+            android:theme="@style/RaisedButtonDark"
+            />
+        <Button
+            android:id="@+id/mailID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mailID"
+            android:onClick="goMailID"
+            android:theme="@style/RaisedButtonDark"
+            />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

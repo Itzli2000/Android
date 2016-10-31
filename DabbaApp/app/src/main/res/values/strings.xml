@@ -5,4 +5,10 @@
     <string name="delivery_login">Ingresa a tu perfil</string>
     <string name="delivery_session_text">Inicia Sesión</string>
     <string name="toolbar_deliver_id">Perfil de repartidor</string>
+    <string name="toolbar_deliver_login">Inicio de sesión</string>
+    <string name="deliver_login_text">Seleciona un método de ingreso</string>
+    <string name="Google">Google</string>
+    <string name="Facebook">Facebook</string>
+    <string name="Twitter">Twitter</string>
+    <string name="mailID">Correo electrónico</string>
 </resources>

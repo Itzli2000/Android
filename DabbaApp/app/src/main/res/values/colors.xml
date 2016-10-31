@@ -8,4 +8,6 @@
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#757575</color>
     <color name="color_divider">#BDBDBD</color>
+    <color name="editTextColorWhite">#FFFFFF</color>
+    <color name="editTextColorBlack">#000000</color>
 </resources>
