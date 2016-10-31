@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="1">
+        android:weightSum="10">
 
         <RelativeLayout
             android:id="@+id/deliverman_text"
@@ -29,17 +29,13 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_weight="0.6"
+            android:layout_weight="3"
             >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/deliver_login_text"
-                android:textStyle="bold"
-                android:textSize="35dp"
-                android:layout_centerInParent="true"
-                android:textAlignment="center"
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="170dp"
+                android:background="@drawable/dabba_logo"
                 />
 
         </RelativeLayout>
@@ -47,44 +43,48 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.4"
+            android:layout_weight="3.3"
             android:orientation="vertical"
             android:gravity="center"
             >
 
-        <Button
-            android:id="@+id/googleID"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Google"
-            android:onClick="goGoogleid"
-            android:theme="@style/RaisedButtonDark"/>
+            <TextView
+                android:id="@+id/usertext_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
 
-        <Button
-            android:id="@+id/faceID"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Facebook"
-            android:onClick="goFacebookid"
-            android:theme="@style/RaisedButtonDark"
-            />
+            <TextView
+                android:id="@+id/passwordtext_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
 
-        <Button
-            android:id="@+id/twitterID"
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Twitter"
-            android:onClick="goTwitterid"
-            android:theme="@style/RaisedButtonDark"
-            />
-        <Button
-            android:id="@+id/mailID"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/mailID"
-            android:onClick="goMailID"
-            android:theme="@style/RaisedButtonDark"
-            />
+            android:layout_height="match_parent"
+            android:layout_weight="3.7"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@styles/RaisedButtonDark"
+                android:text="@string/btn_Log"
+                android:textStyle="normal"
+                android:textSize="25sp"
+                android:onClick="goDeliveryId"
+                />
 
         </LinearLayout>
 

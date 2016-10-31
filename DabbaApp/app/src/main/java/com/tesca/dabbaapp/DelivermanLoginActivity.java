@@ -25,21 +25,6 @@ public class DelivermanLoginActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
     }
 
-    public void goGoogleid(View view) {
-
-
-
-    }
-
-    public void goFacebookid(View view) {
-
-
-    }
-
-    public void goTwitterid(View view) {
-
-
-    }
 
     public void goMailID(View view) {
 

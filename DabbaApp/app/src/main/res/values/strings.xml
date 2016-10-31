@@ -11,4 +11,7 @@
     <string name="Facebook">Facebook</string>
     <string name="Twitter">Twitter</string>
     <string name="mailID">Correo electrónico</string>
+    <string name="btn_Log">Ingresa</string>
+    <string name="user_text">Usuario</string>
+    <string name="password_text">Contraseña</string>
 </resources>
