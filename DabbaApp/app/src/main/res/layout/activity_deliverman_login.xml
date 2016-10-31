@@ -11,42 +11,51 @@
     tools:context="com.tesca.dabbaapp.DelivermanLoginActivity"
     >
 
-    <include layout="@layout/actionbar_toolbar"/>
+    <!--<include layout="@layout/actionbar_toolbar"/>
 
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
 
-
-    <LinearLayout
-        android:id="@+id/deliverman_login"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="10">
-
-        <RelativeLayout
-            android:id="@+id/deliverman_text"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_weight="3"
-            >
-
-            <ImageView
-                android:layout_width="350dp"
-                android:layout_height="170dp"
-                android:background="@drawable/dabba_logo"
-                />
-
-        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="3.3"
             android:orientation="vertical"
-            android:gravity="center"
+            android:weightSum="1"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:paddingTop="0dp"
+            android:layout_gravity="center"
             >
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            >
+
+                    <ImageView
+                        android:id="@+id/deliver_dabba_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/dabba_logo"
+                        android:layout_gravity="center"
+                        />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:layout_weight="0.4"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -80,33 +89,19 @@
             </android.support.design.widget.TextInputLayout>
 
 
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="3.7"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-
             <Button
                 android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:theme="@style/RaiseButtonDark"
+                android:theme="@style/RaisedButtonDark"
                 android:text="@string/btn_Log"
-                android:onClick="goDeliveryId"
+                android:onClick="goMailID"
                 />
 
-        </LinearLayout>
+            </LinearLayout>
 
+    </ScrollView>
 
-    </LinearLayout>
-
-
-
+</LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

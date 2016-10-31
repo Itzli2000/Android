@@ -25,6 +25,8 @@
                 android:value=".DelivermanLoginActivity" />
         </activity>
 
+        //Jerarquia padre para Deliverman Login
+
         <activity android:name=".DelivermanLoginActivity"
             android:parentActivityName=".DeliverMainActivity">
 

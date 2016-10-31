@@ -13,7 +13,7 @@ public class DelivermanLoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deliverman_login);
 
-        showToolbar(getResources().getString(R.string.toolbar_deliver_login),true);
+        //showToolbar(getResources().getString(R.string.toolbar_deliver_login),true);
 
 
     }
