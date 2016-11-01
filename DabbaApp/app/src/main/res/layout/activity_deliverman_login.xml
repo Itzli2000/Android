@@ -11,34 +11,30 @@
     tools:context="com.tesca.dabbaapp.DelivermanLoginActivity"
     >
 
-    <!--<include layout="@layout/actionbar_toolbar"/>
-
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    <include layout="@layout/actionbar_toolbar"/>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:weightSum="1"
-            android:padding="@dimen/activity_horizontal_margin"
-            android:paddingTop="0dp"
-            android:layout_gravity="center"
             >
 
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="0.6"
             >
 
                     <ImageView
                         android:id="@+id/deliver_dabba_logo"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/dabba_logo"
-                        android:layout_gravity="center"
+                        android:layout_centerInParent="true"
                         />
 
         </RelativeLayout>
@@ -48,7 +44,6 @@
             android:layout_height="match_parent"
             android:fillViewport="true"
             android:layout_weight="0.4"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             >
 
             <LinearLayout
