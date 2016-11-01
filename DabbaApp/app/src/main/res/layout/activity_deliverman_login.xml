@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@color/colorLightPrimary"
+    android:background="@color/colorPrimary"
     tools:context="com.tesca.dabbaapp.DelivermanLoginActivity"
     >
 
@@ -26,6 +26,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/backgnd_1"
             android:layout_weight="0.6"
             >
 
@@ -49,6 +50,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="vertical">
 
 
