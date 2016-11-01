@@ -15,7 +15,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         //Jerarquia padre para DeliveryID
         <activity
             android:name=".DeliverIDActivity"
@@ -24,22 +23,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".DelivermanLoginActivity" />
         </activity>
-
         //Jerarquia padre para Deliverman Login
-
-        <activity android:name=".DelivermanLoginActivity"
+        <activity
+            android:name=".DelivermanLoginActivity"
             android:parentActivityName=".DeliverMainActivity">
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".DeliverMainActivity" />
-
         </activity>
         <activity
             android:name=".ReferenciaActivity"
             android:label="@string/title_activity_referencia"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".DeliverID2Activity"
+            android:label="@string/title_activity_deliver_id2"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

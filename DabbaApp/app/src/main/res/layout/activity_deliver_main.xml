@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.tesca.dabbaapp.DeliverMainActivity"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/wood_bckgnd"
     >
 
     <LinearLayout
@@ -59,7 +59,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/moto1"
+                android:background="@drawable/moto2"
                 android:id="@+id/imageView"
                 android:layout_centerInParent="true"
                 android:scaleType="fitCenter" />

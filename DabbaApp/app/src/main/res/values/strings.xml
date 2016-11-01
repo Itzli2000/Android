@@ -16,4 +16,10 @@
     <string name="password_text">Contraseña</string>
     <string name="hint_user">Usuario</string>
     <string name="hint_password">Contraseña</string>
+    <string name="title_activity_deliver_id2">DeliverID2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
