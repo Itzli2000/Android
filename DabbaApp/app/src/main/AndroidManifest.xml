@@ -35,10 +35,6 @@
             android:name=".ReferenciaActivity"
             android:label="@string/title_activity_referencia"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".DeliverID2Activity"
-            android:label="@string/title_activity_deliver_id2"
-            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
