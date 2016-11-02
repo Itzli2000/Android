@@ -31,7 +31,7 @@ public class DelivermanLoginActivity extends AppCompatActivity {
 
         //Intent para llamar funcion que muestra el ID de de repartidor
 
-        Intent intent = new Intent(this, DeliverIDActivity.class);
+        Intent intent = new Intent(this, DeliverNavigationActivity.class);
         startActivity(intent);
     }
 }

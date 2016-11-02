@@ -34,7 +34,11 @@
         <activity
             android:name=".ReferenciaActivity"
             android:label="@string/title_activity_referencia"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DeliverNavigationActivity"
+            android:label="@string/title_activity_deliver_navigation"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
