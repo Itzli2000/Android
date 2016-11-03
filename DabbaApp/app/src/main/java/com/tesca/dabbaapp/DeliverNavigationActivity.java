@@ -1,5 +1,6 @@
 package com.tesca.dabbaapp;
 
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class DeliverNavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,11 +37,15 @@ public class DeliverNavigationActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        HomeFragment homeFragment = new HomeFragment();
+        android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction().replace(R.id.content_deliver_navigation, homeFragment, homeFragment.getTag()).commit();
     }
 
     @Override
@@ -80,19 +86,35 @@ public class DeliverNavigationActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_home) {
 
-        } else if (id == R.id.nav_slideshow) {
+            // Acciones para opción HOME
+            HomeFragment homeFragment = new HomeFragment();
+            android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.content_deliver_navigation, homeFragment, homeFragment.getTag()).commit();
+            Toast.makeText(this,"Principal", Toast.LENGTH_SHORT).show();
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_finish) {
+
+            CompleteFragment completeFragment = new CompleteFragment();
+            android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.content_deliver_navigation, completeFragment, completeFragment.getTag()).commit();
+            Toast.makeText(this,"Entrega completada", Toast.LENGTH_SHORT).show();
+
+        } else if (id == R.id.deliver_list) {
+
+            DeliversFragment deliversFragment = new DeliversFragment();
+            android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.content_deliver_navigation, deliversFragment, deliversFragment.getTag()).commit();
+            Toast.makeText(this,"Lista pendientes", Toast.LENGTH_SHORT).show();
+
+        } /*else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 
-        }
+        }*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
