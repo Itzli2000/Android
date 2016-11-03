@@ -29,11 +29,13 @@
                     />
 
 
-                <com.google.android.gms.maps.MapFragment
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
                     android:id="@+id/mapFragment"
-                    android:layout_weight="7" />
+                    android:layout_weight="7"
+                    />
 
 
                 <TextView
