@@ -73,6 +73,7 @@ public class DeliversFragment extends Fragment {
         //Datos del repartidor
         String [] id_deliver = {"Nombre: ", "ID Empleado: "};
         //Mostrar los datos del repartidor
+
         ListAdapter adapterid = new ArrayAdapter<String>(this, R.layout.simple_list_item_1, id_deliver);
         ListView listview = (ListView)  (R.id.missing_list_deliver);
         listview.setAdapter(adapterid);
