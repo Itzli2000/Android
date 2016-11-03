@@ -64,40 +64,13 @@ public class DeliversFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-        deliver_list();
-        deliverID();
     }
 
     private void deliverID() {
 
-        //Datos del repartidor
-        String [] id_deliver = {"Nombre: ", "ID Empleado: "};
-        //Mostrar los datos del repartidor
-
-        ListAdapter adapterid = new ArrayAdapter<String>(this, R.layout.simple_list_item_1, id_deliver);
-        ListView listview = (ListView)  (R.id.missing_list_deliver);
-        listview.setAdapter(adapterid);
     }
 
     private void deliver_list() {
-
-        //Datos a mostrar
-        String [] deliverlist = {"Entrega 1", "Entrega 2","Entrega3","Entrega 4",
-                "Entrega 5", "Entrega 6", "Entrega 7", "Entrega 8"};
-
-        //Adaptar la forma de mostrar datos
-        ListAdapter adapter = new ArrayAdapter<String>(this, R.layout.simple_list_item_1, deliverlist);
-        ListView listview = (ListView)  findViewById(R.id.list_deliver);
-        listview.setAdapter(adapter);
-
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                String entrega = String.valueOf(parent.getItemAtPosition(position));
-                Toast.makeText(DeliverIDActivity.this, entrega, Toast.LENGTH_SHORT).show();
-            }
-        });
 
     }
 
