@@ -1,4 +1,4 @@
-package com.tesca.dabbaapp;
+package com.tesca.dabbaapp.Deliverman_control_views;
 
 
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.tesca.dabbaapp.R;
 
 /**
  * A simple {@link Fragment} subclass.

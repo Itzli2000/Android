@@ -1,6 +1,5 @@
-package com.tesca.dabbaapp;
+package com.tesca.dabbaapp.Deliverman_control_views;
 
-import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,6 +13,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.tesca.dabbaapp.R;
 
 public class DeliverNavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -40,6 +41,7 @@ public class DeliverNavigationActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        //Pantalla de navegacion GOME, cargada por defecto
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -96,6 +98,7 @@ public class DeliverNavigationActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_finish) {
 
+            //Pantalla que muesta la informacion del pedido actual, para ser entregado y dado por completado
             CompleteFragment completeFragment = new CompleteFragment();
             android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_deliver_navigation, completeFragment, completeFragment.getTag()).commit();
@@ -103,6 +106,7 @@ public class DeliverNavigationActivity extends AppCompatActivity
 
         } else if (id == R.id.deliver_list) {
 
+            //Pantalla que muestra la lista de entregas pendientes
             DeliversFragment deliversFragment = new DeliversFragment();
             android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_deliver_navigation, deliversFragment, deliversFragment.getTag()).commit();
