@@ -28,7 +28,31 @@ dependencies {
     compile 'com.android.support:design:24.2.1'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.android.support:support-v4:24.2.1'
+
+    //Google
+    compile 'com.google.android.gms:play-services-auth:9.8.0'
+
+
+    //Fire base
+    'com.google.firebase:firebase-core:9.6.1'
+    'com.google.firebase:firebase-database:9.6.1'
+    'com.google.firebase:firebase-storage:9.6.1'
+    'com.google.firebase:firebase-crash:9.6.1'
+    'com.google.firebase:firebase-auth:9.6.1'
+    'com.google.firebase:firebase-messaging:9.6.1'
+    'com.google.firebase:firebase-config:9.6.1'
+    'com.google.firebase:firebase-invites:9.6.1'
+    'com.google.firebase:firebase-ads:9.6.1'
+    'com.google.android.gms:play-services-appindexing:9.6.1'
+
+    //Firebase UI
+    compile 'com.firebaseui:firebase-ui-database:1.0.0'
+
+    
+    //Android Services
     compile 'com.google.android.gms:play-services-maps:9.8.0'
     compile 'com.google.android.gms:play-services:9.8.0'
     testCompile 'junit:junit:4.12'
 }
+
+apply plugin: 'com.google.gms.google-services'
