@@ -99,9 +99,9 @@ public class    HomeFragment extends Fragment  implements OnMapReadyCallback{
     private void countDown() {
 
         //Controles para cronometro
-        long horaentrega = 17;
-        long horaActual = Calendar.getInstance().HOUR_OF_DAY;
-        long hora = (horaentrega - horaActual)*1000;
+        long horaentrega = 10800000; //Hora 3
+        long horaActual = 7200000; //Hora 2
+        long hora = horaentrega - horaActual;
 
 
         textView = (TextView)root.findViewById(R.id.chronometer2);
