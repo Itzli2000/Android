@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.tesca.dabbaapp.Deliverman_control_views.HomeFragment">
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -31,11 +32,11 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:name="com.google.android.gms.maps.SupportMapFragment"
-                    android:id="@+id/mapFragment"
+                    android:layout_height="0dp"
                     android:layout_weight="7"
-                    />
+                    >
+                <include layout="@layout/activity_maps" />
+                </FrameLayout>
 
 
                 <TextView
