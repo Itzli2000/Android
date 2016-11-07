@@ -11,14 +11,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.tesca.dabbaapp.R;
 
-import static com.tesca.dabbaapp.R.id.map;
+import static com.tesca.dabbaapp.R.id.map1;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,28 +58,47 @@ public class    HomeFragment extends Fragment  implements OnMapReadyCallback{
 
         //Controles para mapa
 
-        /*SupportMapFragment mSupportMapFragment = (SupportMapFragment) getFragmentManager().findFragmentById(map);
+        mSupportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map1);
         if (mSupportMapFragment == null) {
             FragmentManager fragmentManager = getFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             mSupportMapFragment = SupportMapFragment.newInstance();
-            fragmentTransaction.replace(map, mSupportMapFragment).commit();
+            fragmentTransaction.replace(R.id.map1, mSupportMapFragment).commit();
         }
+
         if (mSupportMapFragment != null)
         {
-            GoogleMap googleMap = mSupportMapFragment.getMapAsync(OnMapReadyCallback this);
-            if (googleMap != null)
-                googleMap.addMarker(new MarkerOptions().position(new LatLng(10.1253,10.5868)));
-        }*/
+            mSupportMapFragment.getMapAsync(new OnMapReadyCallback() {
+                @Override public void onMapReady(GoogleMap googleMap) {
+                    if (googleMap != null) {
+
+                        googleMap.getUiSettings().setAllGesturesEnabled(true);
+
+                        LatLng mexico = new LatLng(19.432608,-99.133209);
+
+                        CameraPosition cameraPosition = new CameraPosition.Builder().target(mexico).zoom(15.0f).build();
+                        CameraUpdate cameraUpdate = CameraUpdateFactory.newCameraPosition(cameraPosition);
+                        googleMap.moveCamera(cameraUpdate);
+
+                    }
+
+                }
+            });
+        }
+
 
     }
 
     private void countDown() {
 
         //Controles para cronometro
+        int hora1 = 13800000;
+        int hora2 = 13000000;
+        int hora = hora1 - hora2;
+
         textView = (TextView)root.findViewById(R.id.chronometer2);
 
-        new CountDownTimer(1800000, 1000) {
+        new CountDownTimer(hora, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 String v = String.format("%02d", millisUntilFinished/60000);
@@ -96,3 +118,4 @@ public class    HomeFragment extends Fragment  implements OnMapReadyCallback{
 
     }
 }
+

@@ -22,7 +22,7 @@
 
                 <TextView
                     android:id="@+id/chronometer2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="80dp"
                     android:gravity="center"
@@ -30,17 +30,19 @@
                     />
 
 
-                <FrameLayout
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:map="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/map1"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="7"
-                    >
-                <include layout="@layout/activity_maps" />
-                </FrameLayout>
+                    />
 
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:text="Cliente: Juana Perez\nDireccion: Alamo Negro S/N"
