@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.3"
     defaultConfig {
         applicationId "com.tesca.dabbaapp"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -30,9 +30,6 @@ dependencies {
     compile 'com.android.support:design:24.2.1'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.android.support:support-v4:24.2.1'
-
-
-
     compile 'com.google.android.gms:play-services-auth:9.8.0'
 
     //Fire base
@@ -43,6 +40,9 @@ dependencies {
     compile 'com.google.firebase:firebase-auth:9.8.0'
     //Firebase UI
     compile 'com.firebaseui:firebase-ui-database:1.0.0'
+
+    //Otros
+    compile 'com.danilomendes.progressbar:progressbar:1.0.2'
 
     //Google
     compile 'com.google.android.gms:play-services-maps:9.8.0'

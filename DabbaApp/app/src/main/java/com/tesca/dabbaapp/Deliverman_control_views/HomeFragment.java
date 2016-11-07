@@ -6,10 +6,12 @@ import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -19,9 +21,14 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.vision.barcode.Barcode;
 import com.tesca.dabbaapp.R;
 
+import java.sql.Time;
+import java.util.Calendar;
+
 import static com.tesca.dabbaapp.R.id.map1;
+import static com.tesca.dabbaapp.R.id.thing_proto;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -92,12 +99,12 @@ public class    HomeFragment extends Fragment  implements OnMapReadyCallback{
     private void countDown() {
 
         //Controles para cronometro
-        int hora1 = 13800000;
-        int hora2 = 13000000;
-        int hora = hora1 - hora2;
+        long horaentrega = 17;
+        long horaActual = Calendar.getInstance().HOUR_OF_DAY;
+        long hora = (horaentrega - horaActual)*1000;
+
 
         textView = (TextView)root.findViewById(R.id.chronometer2);
-
         new CountDownTimer(hora, 1000) {
 
             public void onTick(long millisUntilFinished) {
@@ -110,6 +117,7 @@ public class    HomeFragment extends Fragment  implements OnMapReadyCallback{
                 textView.setText("Fin del tiempo");
             }
         }.start();
+
 
     }
 
