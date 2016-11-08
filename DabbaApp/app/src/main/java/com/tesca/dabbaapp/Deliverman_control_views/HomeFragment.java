@@ -13,9 +13,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
@@ -33,7 +36,11 @@ import static com.tesca.dabbaapp.R.id.thing_proto;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class    HomeFragment extends Fragment  implements OnMapReadyCallback{
+public class    HomeFragment extends Fragment {
+
+    private MapView mMapView;
+    private GoogleMap mMap;
+    private Bundle mBundle;
 
 
     public HomeFragment() {
@@ -51,15 +58,78 @@ public class    HomeFragment extends Fragment  implements OnMapReadyCallback{
                              Bundle savedInstanceState) {
 
 
-        root = inflater.inflate(R.layout.fragment_home,null, false);
+        root = inflater.inflate(R.layout.fragment_home,container, false);
+
+
+        //Nueva codificacion para mapa
+
+        MapsInitializer.initialize(getActivity());
+
+        mMapView = (MapView) root.findViewById(R.id.map1);
+        mMapView.onCreate(mBundle);
+        setUpMapIfNeeded(root);
 
         countDown();
-       // initializeMap();
+        //initializeMap();
 
         return root;
 
     }
 
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mBundle = savedInstanceState;
+    }
+
+    private void setUpMapIfNeeded(View inflatedView) {
+        if (mMap == null) {
+            ((MapView) inflatedView.findViewById(R.id.map1)).getMapAsync(new OnMapReadyCallback() {
+                @Override
+                public void onMapReady(GoogleMap googleMap) {
+                    if (googleMap == null) {
+
+                        googleMap.getUiSettings().setAllGesturesEnabled(true);
+
+                        LatLng mexico = new LatLng(19.432608,-99.133209);
+
+                        CameraPosition cameraPosition = new CameraPosition.Builder().target(mexico).zoom(15.0f).build();
+                        CameraUpdate cameraUpdate = CameraUpdateFactory.newCameraPosition(cameraPosition);
+                        googleMap.moveCamera(cameraUpdate);
+
+                    }
+                }
+            });
+            if (mMap != null) {
+                setUpMap();
+            }
+        }
+    }
+
+    private void setUpMap() {
+        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mMapView.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mMapView.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        mMapView.onDestroy();
+        super.onDestroy();
+    }
+
+    //Antigüa codificadion de mapa
     private void initializeMap() {
 
 
@@ -121,9 +191,5 @@ public class    HomeFragment extends Fragment  implements OnMapReadyCallback{
 
     }
 
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-
-    }
 }
 
