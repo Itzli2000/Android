@@ -99,13 +99,13 @@ public class    HomeFragment extends Fragment  implements OnMapReadyCallback{
     private void countDown() {
 
         //Controles para cronometro
-        long horaentrega = 10800000; //Hora 3
-        long horaActual = 7200000; //Hora 2
+        long horaentrega = 1800000;
+        long horaActual = 7200000;
         long hora = horaentrega - horaActual;
 
 
         textView = (TextView)root.findViewById(R.id.chronometer2);
-        new CountDownTimer(hora, 1000) {
+        new CountDownTimer(horaentrega, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 String v = String.format("%02d", millisUntilFinished/60000);
