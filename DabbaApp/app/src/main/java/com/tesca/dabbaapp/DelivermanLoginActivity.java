@@ -32,23 +32,23 @@ public class DelivermanLoginActivity extends AppCompatActivity {
 
     private static final String TAG = "SignInActivity";
     private String mCustomToken;
-    private Button mSignInButton;
     private FirebaseAuth mAuth;
+    private  FirebaseDatabase mDatabase;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    FirebaseDatabase mDatabase;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deliverman_login);
 
-        //Asignar boton "Ingresa" a variable
-        mSignInButton = (Button) findViewById(R.id.btn_login);
 
         //Inicializar base de datos
-        mDatabase = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
 
+        DatabaseReference user = mDatabase.getReference().child("Delivery");
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -83,9 +83,10 @@ public class DelivermanLoginActivity extends AppCompatActivity {
                 });
 
 
+
+
+
         showToolbar(getResources().getString(R.string.toolbar_deliver_login),true);
-
-
     }
 
     @Override
@@ -104,51 +105,7 @@ public class DelivermanLoginActivity extends AppCompatActivity {
         // ...
     }
 
-    private void startSignIn() {
-        // Initiate sign in with custom token
-        // [START sign_in_custom]
-        mAuth.signInWithCustomToken(mCustomToken)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        Log.d(TAG, "signInWithCustomToken:onComplete:" + task.isSuccessful());
 
-                        // If sign in fails, display a message to the user. If sign in succeeds
-                        // the auth state listener will be notified and logic to handle the
-                        // signed in user can be handled in the listener.
-                        if (!task.isSuccessful()) {
-                            Log.w(TAG, "signInWithCustomToken", task.getException());
-                            Toast.makeText(DelivermanLoginActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-        // [END sign_in_custom]
-    }
-
-
-    private void setCustomToken(String token) {
-        mCustomToken = token;
-
-        String status;
-        if (mCustomToken != null) {
-            status = "Token:" + mCustomToken;
-        } else {
-            status = "Token: null";
-        }
-
-        // Enable/disable sign-in button and show the token
-        findViewById(R.id.btn_login).setEnabled((mCustomToken != null));
-    }
-
-
-    public void onClick(View v) {
-        int i = v.getId();
-        if (i == R.id.btn_login) {
-            startSignIn();
-
-        }
-    }
 
 
     public void showToolbar (String tittle, boolean upButton){
@@ -160,7 +117,6 @@ public class DelivermanLoginActivity extends AppCompatActivity {
 
 
     public void goMailID(View view) {
-
 
         //Intent para llamar funcion que muestra el ID de de repartidor
 

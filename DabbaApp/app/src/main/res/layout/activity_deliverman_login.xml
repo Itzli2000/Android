@@ -90,7 +90,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/RaisedButtonDark"
+                android:enabled="true"
                 android:text="@string/btn_Log"
+                android:onClick="goMailID"
                 />
 
             </LinearLayout>

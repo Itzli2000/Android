@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "903077436750",
-    "firebase_url": "https://dabbawala-ba55c.firebaseio.com",
-    "project_id": "dabbawala-ba55c",
-    "storage_bucket": "dabbawala-ba55c.appspot.com"
+    "project_number": "870471053123",
+    "firebase_url": "https://dabba-deliver.firebaseio.com",
+    "project_id": "dabba-deliver",
+    "storage_bucket": "dabba-deliver.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:903077436750:android:f95c989ea82daf5b",
+        "mobilesdk_app_id": "1:870471053123:android:f95c989ea82daf5b",
         "android_client_info": {
           "package_name": "com.tesca.dabbaapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "903077436750-r75goicmo5bq6itdvufi8cb07krinjh5.apps.googleusercontent.com",
+          "client_id": "870471053123-31k3n6lnundqisd095c7ol3ut3eb1rj3.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.tesca.dabbaapp",
@@ -23,13 +23,13 @@
           }
         },
         {
-          "client_id": "903077436750-ttvj0ebm4fve5cd3n5q91lqf3ne3b7u2.apps.googleusercontent.com",
+          "client_id": "870471053123-otd25l4t7rvfumeqiqf9tplej6n7as9u.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDVcSmTHL-3r_gf9uURGM4YCj8EVfezgrA"
+          "current_key": "AIzaSyCEB-dOrEmvFrTnNgxdPL-hZv9_ExeKnro"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "903077436750-ttvj0ebm4fve5cd3n5q91lqf3ne3b7u2.apps.googleusercontent.com",
+              "client_id": "870471053123-otd25l4t7rvfumeqiqf9tplej6n7as9u.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

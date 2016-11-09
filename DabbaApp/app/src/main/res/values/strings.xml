@@ -21,7 +21,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Salir</string>
     <string name="title_activity_deliver_navigation">DeliverNavigationActivity</string>
     <string name="deliver_list">Entregas</string>
     <string name="deliverhome">Home</string>

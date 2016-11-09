@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.tesca.dabbaapp.R;
 
 public class DeliverNavigationActivity extends AppCompatActivity
@@ -112,9 +113,11 @@ public class DeliverNavigationActivity extends AppCompatActivity
             manager.beginTransaction().replace(R.id.content_deliver_navigation, deliversFragment, deliversFragment.getTag()).commit();
             Toast.makeText(this,"Lista pendientes", Toast.LENGTH_SHORT).show();
 
-        } /*else if (id == R.id.nav_manage) {
+        } else if (id == R.id.action_settings) {
 
-        } else if (id == R.id.nav_share) {
+            FirebaseAuth.getInstance().signOut();
+
+        } /*else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 
