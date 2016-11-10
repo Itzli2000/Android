@@ -1,5 +1,6 @@
 package com.tesca.dabbaapp.Deliverman_control_views;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,13 +13,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.tesca.dabbaapp.DelivermanLoginActivity;
 import com.tesca.dabbaapp.R;
 
 public class DeliverNavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +80,9 @@ public class DeliverNavigationActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.logout) {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(DeliverNavigationActivity.this, DelivermanLoginActivity.class));
             return true;
         }
 
@@ -111,13 +117,9 @@ public class DeliverNavigationActivity extends AppCompatActivity
             DeliversFragment deliversFragment = new DeliversFragment();
             android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_deliver_navigation, deliversFragment, deliversFragment.getTag()).commit();
-            Toast.makeText(this,"Lista pendientes", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Lista pendientes", Toast.LENGTH_SHORT).show();
 
-        } else if (id == R.id.action_settings) {
-
-            FirebaseAuth.getInstance().signOut();
-
-        } /*else if (id == R.id.nav_share) {
+        }/*else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 

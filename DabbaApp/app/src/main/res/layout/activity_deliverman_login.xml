@@ -92,7 +92,6 @@
                 android:theme="@style/RaisedButtonDark"
                 android:enabled="true"
                 android:text="@string/btn_Log"
-                android:onClick="goMailID"
                 />
 
             </LinearLayout>
