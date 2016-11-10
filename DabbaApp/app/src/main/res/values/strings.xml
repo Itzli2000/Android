@@ -29,7 +29,6 @@
     <string name="nav_deliver_list">Entregas</string>
     <string name="deliver_menu_principal">Principal</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="user_name">Cliente:</string>
     <string name="user_address">Direccion:</string>

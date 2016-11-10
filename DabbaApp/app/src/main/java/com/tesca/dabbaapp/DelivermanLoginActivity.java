@@ -27,16 +27,21 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.tesca.dabbaapp.Deliverman_control_views.DeliverNavigationActivity;
+import com.tesca.dabbaapp.Deliverman_control_views.HomeFragment;
+import com.tesca.dabbaapp.Deliverman_control_views.MapsActivity;
 
 import java.security.PrivateKey;
 
 public class DelivermanLoginActivity extends AppCompatActivity {
+
+    private static final String TAG = "SignInActivity";
 
     public static EditText mUser;
     public static EditText mPassword;
     private Button mLoginBtn;
 
 
+    private FirebaseDatabase mDatabase;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
@@ -46,7 +51,10 @@ public class DelivermanLoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_deliverman_login);
 
         //Inicializar base de datos
+        mDatabase = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
+
+        DatabaseReference a =  mDatabase.getReference().child("Users").child("Deliver");
 
         mUser = (EditText) findViewById(R.id.deliver_user);
         mPassword = (EditText) findViewById(R.id.deliver_password);
@@ -57,10 +65,10 @@ public class DelivermanLoginActivity extends AppCompatActivity {
 
                 if(firebaseAuth.getCurrentUser() != null){
 
-                    startActivity(new Intent(DelivermanLoginActivity.this, DeliverNavigationActivity.class));
+                    // User is signed in
+                    startActivity(new Intent(DelivermanLoginActivity.this, HomeFragment.class));
 
                 }
-
             }
         };
 
@@ -72,10 +80,6 @@ public class DelivermanLoginActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
         showToolbar(getResources().getString(R.string.toolbar_deliver_login),true);
     }
 
@@ -86,6 +90,11 @@ public class DelivermanLoginActivity extends AppCompatActivity {
     }
 
     private void startSignIn (){
+
+
+
+
+
         String user = mUser.getText().toString();
 
         String pass = mPassword.getText().toString();
@@ -118,12 +127,4 @@ public class DelivermanLoginActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
     }
 
-
-    /*public void goMailID(View view) {
-
-        //Intent para llamar funcion que muestra el ID de de repartidor
-
-        Intent intent = new Intent(this, DeliverNavigationActivity.class);
-        startActivity(intent);
-    }*/
 }
