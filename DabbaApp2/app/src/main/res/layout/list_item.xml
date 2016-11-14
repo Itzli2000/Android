@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_weight="5.91"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/hour_tv"
+            android:text="7:00"
+            android:textSize="24sp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/customer"
+                android:layout_width="311dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:paddingTop="6dip"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="Ricardo Delgado" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="313dp"
+                android:layout_height="wrap_content"
+                android:textColor="#5d5d5d"
+                android:textStyle="bold"
+                android:text="100$" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="307dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:textColor="@color/colorAccent"
+                android:text="Pendiente" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
