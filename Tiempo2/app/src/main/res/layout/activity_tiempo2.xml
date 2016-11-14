@@ -11,48 +11,42 @@
     tools:context="com.example.itzli.tiempo2.Tiempo2Activity">
 
 
-    <TimePicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/timePicker"
-        android:headerBackground="@android:color/holo_green_dark"
-        android:numbersSelectorColor="@android:color/holo_green_dark" />
-
-
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cancel"
-        android:layout_alignBaseline="@+id/set_alarm"
-        android:layout_alignBottom="@+id/set_alarm"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="14dp"
-        android:layout_marginEnd="14dp" />
-
-    <TextView
-        android:text="@string/cancel_alarm"
+    <Button
+        android:text="@string/set_alarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/set_alarm"
-        android:layout_marginTop="39dp"
-        android:layout_below="@+id/timePicker"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/update_text"
+        android:layout_toStartOf="@+id/update_text"
+        android:layout_marginBottom="53dp" />
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timePicker"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/update_text"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginStart="15dp" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="Poner alarma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/set_alarm"
+        android:id="@+id/update_text"
+        android:layout_alignBottom="@+id/timePicker"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:id="@+id/update_text" />
+        android:layout_marginBottom="79dp" />
+
+    <Button
+        android:text="@string/cancel_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancel"
+        android:layout_alignBottom="@+id/set_alarm"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>
