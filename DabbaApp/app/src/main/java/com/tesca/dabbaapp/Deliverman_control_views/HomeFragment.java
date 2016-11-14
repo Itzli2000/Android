@@ -38,19 +38,11 @@ import static com.tesca.dabbaapp.R.id.thing_proto;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class    HomeFragment extends Fragment implements OnMapReadyCallback {
-
-    private MapView mMapView;
-    private GoogleMap mMap;
-    private Bundle mBundle;
-
+public class    HomeFragment extends Fragment {
 
     public HomeFragment() {
         // Required empty public constructor
     }
-
-    private SupportMapFragment mSupportMapFragment;
-
 
     Fragment fragment =  null;
     TextView textView;
@@ -64,20 +56,6 @@ public class    HomeFragment extends Fragment implements OnMapReadyCallback {
         return root;
 
     }
-
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mBundle = savedInstanceState;
-
-
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
-    }
-
 
     private void countDown() {
 
@@ -104,16 +82,6 @@ public class    HomeFragment extends Fragment implements OnMapReadyCallback {
 
     }
 
-
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-
-
-        LatLng tesca = new LatLng(19.526524,-99.2346651);
-        mMap.addMarker(new MarkerOptions().position(tesca).title("Marker in Tesca"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(tesca));
-    }
 
 }
 

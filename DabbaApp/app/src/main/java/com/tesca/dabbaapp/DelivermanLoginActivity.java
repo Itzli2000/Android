@@ -66,7 +66,7 @@ public class DelivermanLoginActivity extends AppCompatActivity {
                 if(firebaseAuth.getCurrentUser() != null){
 
                     // User is signed in
-                    startActivity(new Intent(DelivermanLoginActivity.this, HomeFragment.class));
+                    startActivity(new Intent(DelivermanLoginActivity.this, DeliverNavigationActivity.class));
 
                 }
             }

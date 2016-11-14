@@ -46,13 +46,14 @@ public class DeliverNavigationActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        //Pantalla de navegacion GOME, cargada por defecto
+        //Pantalla de navegacion HOME, cargada por defecto
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         HomeFragment homeFragment = new HomeFragment();
         android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction().replace(R.id.content_deliver_navigation, homeFragment, homeFragment.getTag()).commit();
+        Toast.makeText(this,"Principal", Toast.LENGTH_SHORT).show();
     }
 
     @Override
