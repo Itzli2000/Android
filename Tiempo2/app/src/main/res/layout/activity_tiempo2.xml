@@ -16,5 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/timePicker" />
+        android:id="@+id/timePicker"
+        android:headerBackground="@android:color/holo_green_dark"
+        android:numbersSelectorColor="@android:color/holo_green_dark" />
 </RelativeLayout>
