@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                         String id = c.getString("id");
                         String created_at = c.getString("created_at");
                         String delivery_date = c.getString("delivery_date");
-                        String 
+                        
 
 
                         // Phone node is JSON Object

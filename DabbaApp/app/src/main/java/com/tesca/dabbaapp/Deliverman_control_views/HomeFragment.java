@@ -4,9 +4,11 @@ package com.tesca.dabbaapp.Deliverman_control_views;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -72,6 +74,9 @@ public class    HomeFragment extends Fragment {
                 String v = String.format("%02d", millisUntilFinished/60000);
                 int va = (int)( (millisUntilFinished%60000)/1000);
                 textView.setText(v+":"+String.format("%02d",va));
+                if(v == "3"){
+                    dialog();
+                }
             }
 
             public void onFinish() {
@@ -79,6 +84,15 @@ public class    HomeFragment extends Fragment {
             }
         }.start();
 
+
+
+
+    }
+
+    private void dialog() {
+
+        DialogFragment dialog = new DialogFragment();
+        dialog.show(getFragmentManager(),"dialogo");
 
     }
 
