@@ -61,15 +61,12 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBMYPJSYCl23dPsN0Luh63mdbxLOkXPoE8" />
+            android:value="AIzaSyBLf0WJQ0tgseOQOQ42Il6-URSbuSZgLqY" />
 
         <uses-feature
             android:glEsVersion="0x00020000"
             android:required="true" />
 
-        <activity
-            android:name=".Deliverman_control_views.MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
     </application>
 
 </manifest>

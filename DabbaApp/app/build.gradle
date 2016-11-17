@@ -39,6 +39,7 @@ dependencies {
     compile 'com.danilomendes.progressbar:progressbar:1.0.2'
     compile 'com.google.android.gms:play-services-maps:9.8.0'
     compile 'com.google.android.gms:play-services:9.8.0'
+    compile 'com.android.support.test.espresso:espresso-core:2.2.2'
     testCompile 'junit:junit:4.12'
 }
 
