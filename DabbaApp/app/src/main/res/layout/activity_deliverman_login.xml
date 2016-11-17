@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:background="@drawable/fondo3"
-    tools:context="com.tesca.dabbaapp.DelivermanLoginActivity"
+    tools:context="com.tesca.dabbaapp.DelivermanEmailActivity"
     >
 
     <include layout="@layout/actionbar_toolbar"/>

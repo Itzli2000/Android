@@ -26,14 +26,14 @@
         //Jerarquia padre para DeliveryID
         <activity
             android:name=".DeliverIDActivity"
-            android:parentActivityName=".DelivermanLoginActivity">
+            android:parentActivityName=".DelivermanEmailActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".DelivermanLoginActivity" />
+                android:value=".DelivermanEmailActivity" />
         </activity>
         //Jerarquia padre para Deliverman Login
         <activity
-            android:name=".DelivermanLoginActivity"
+            android:name=".DelivermanEmailActivity"
             android:parentActivityName=".DeliverMainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -67,6 +67,7 @@
             android:glEsVersion="0x00020000"
             android:required="true" />
 
+        <activity android:name=".DelivermanGoogleActivity"></activity>
     </application>
 
 </manifest>

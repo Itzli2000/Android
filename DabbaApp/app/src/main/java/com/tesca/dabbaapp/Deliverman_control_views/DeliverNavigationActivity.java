@@ -2,9 +2,6 @@ package com.tesca.dabbaapp.Deliverman_control_views;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,11 +10,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.tesca.dabbaapp.DelivermanLoginActivity;
+import com.tesca.dabbaapp.DelivermanEmailActivity;
 import com.tesca.dabbaapp.R;
 
 public class DeliverNavigationActivity extends AppCompatActivity
@@ -74,7 +70,7 @@ public class DeliverNavigationActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.logout) {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(DeliverNavigationActivity.this, DelivermanLoginActivity.class));
+            startActivity(new Intent(DeliverNavigationActivity.this, DelivermanEmailActivity.class));
             return true;
         }
 

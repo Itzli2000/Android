@@ -19,7 +19,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.tesca.dabbaapp.Deliverman_control_views.DeliverNavigationActivity;
 
-public class DelivermanLoginActivity extends AppCompatActivity {
+public class DelivermanEmailActivity extends AppCompatActivity {
 
     private static final String TAG = "SignInActivity";
 
@@ -53,7 +53,7 @@ public class DelivermanLoginActivity extends AppCompatActivity {
                 if(firebaseAuth.getCurrentUser() != null){
 
                     // User is signed in
-                    startActivity(new Intent(DelivermanLoginActivity.this, DeliverNavigationActivity.class));
+                    startActivity(new Intent(DelivermanEmailActivity.this, DeliverNavigationActivity.class));
 
                 }
             }
@@ -88,7 +88,7 @@ public class DelivermanLoginActivity extends AppCompatActivity {
 
         if(TextUtils.isEmpty(user) || TextUtils.isEmpty(pass)) {
 
-            Toast.makeText(DelivermanLoginActivity.this,"Revisar campos",Toast.LENGTH_LONG).show();
+            Toast.makeText(DelivermanEmailActivity.this,"Revisar campos",Toast.LENGTH_LONG).show();
 
         }else{
             mAuth.signInWithEmailAndPassword(user, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -96,7 +96,7 @@ public class DelivermanLoginActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (!task.isSuccessful()) {
 
-                        Toast.makeText(DelivermanLoginActivity.this, "Error de inicio", Toast.LENGTH_LONG).show();
+                        Toast.makeText(DelivermanEmailActivity.this, "Error de inicio", Toast.LENGTH_LONG).show();
 
                     }
                 }

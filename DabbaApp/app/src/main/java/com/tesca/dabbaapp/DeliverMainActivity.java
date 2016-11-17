@@ -17,7 +17,7 @@ public class DeliverMainActivity extends AppCompatActivity {
 
         //Intent para llamar funcion que muestra el ID de de repartidor
 
-        Intent intent = new Intent(this, DelivermanLoginActivity.class);
+        Intent intent = new Intent(this, DelivermanEmailActivity.class);
         startActivity(intent);
     }
 }
