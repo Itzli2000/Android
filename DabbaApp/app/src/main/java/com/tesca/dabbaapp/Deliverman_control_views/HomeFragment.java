@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.NotificationManagerCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.NotificationCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,6 +48,7 @@ public class    HomeFragment extends Fragment {
 
 
         textView = (TextView)root.findViewById(R.id.chronometer2);
+        textView.setBackgroundColor(getResources().getColor(R.color.DarckGreen));
         new CountDownTimer(horaActual, 1000) {
 
             public void onTick(long millisUntilFinished) {
@@ -89,16 +91,21 @@ public class    HomeFragment extends Fragment {
     private void dialog() {
 
         final AlertFragment dialog = new AlertFragment();
-        dialog.show(getFragmentManager(),"dialogo");
-        final MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.alert04);
-        mp.setLooping(true);
+        dialog.show(getFragmentManager(),"dialog");
+        final MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.alert);
         mp.start();
+
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+            }
+        });
 
         final Timer t = new Timer();
         t.schedule(new TimerTask() {
             public void run() {
                 dialog.dismiss(); // Cierra el alert dialog
-                mp.stop();
                 t.cancel(); // Detiene el timer para evitar crash report
             }
         }, 5000); // Después de 5 segundos se inicia la actividad

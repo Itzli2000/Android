@@ -3,6 +3,7 @@
     <color name="colorPrimary">#4caf50</color>
     <color name="colorPrimaryDark">#388e3c</color>
     <color name="colorToolbar">#1b5e20</color>
+    <color name="DarckGreen">#006400</color>
     <color name="colorAccent">#ffab40</color>
     <color name="colorLightAccent">#ffd180</color>
     <color name="colorLightPrimary">#c8e6c9</color>
