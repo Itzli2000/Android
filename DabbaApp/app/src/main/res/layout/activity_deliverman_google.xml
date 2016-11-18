@@ -20,8 +20,8 @@
             android:id="@+id/google_icon"
             android:contentDescription="@string/dabbalog"
             android:src="@drawable/dabba_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
             android:layout_marginBottom="30dp"
             />
 

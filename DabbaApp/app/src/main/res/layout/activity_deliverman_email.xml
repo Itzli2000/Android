@@ -31,8 +31,8 @@
 
                     <ImageView
                         android:id="@+id/deliver_dabba_logo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
                         android:background="@drawable/dabba_logo"
                         android:layout_centerInParent="true"
                         />

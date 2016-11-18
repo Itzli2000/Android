@@ -35,7 +35,7 @@ public class DelivermanEmailActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_deliverman_login);
+        setContentView(R.layout.activity_deliverman_email);
 
         //Inicializar base de datos
         mDatabase = FirebaseDatabase.getInstance();

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/text_icons"
+    android:background="@drawable/fondo2"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.tesca.dabbaapp.LoginActivity"
     tools:showIn="@layout/activity_login">
@@ -26,6 +26,7 @@
         android:text="@string/deliverEmail"
         android:layout_marginBottom="20dp"
         android:onClick="goEmailLog"
+        android:theme="@style/RaisedButtonDark"
         />
 
     <Button
@@ -34,6 +35,7 @@
         android:layout_height="wrap_content"
         android:text="@string/deliverGoogle"
         android:onClick="GoGoogleLog"
+        android:theme="@style/RaisedButtonDark"
         />
 
 </LinearLayout>

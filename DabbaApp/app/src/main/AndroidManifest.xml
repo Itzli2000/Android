@@ -48,8 +48,19 @@
             android:glEsVersion="0x00020000"
             android:required="true" />
 
-        <activity android:name=".Deliverman_control_views.DelivermanGoogleActivity" />
-        <activity android:name=".Deliverman_control_views.DelivermanEmailActivity" />
+        <activity
+            android:name=".Deliverman_control_views.DelivermanGoogleActivity"
+            android:parentActivityName=".LoginActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".LoginActivity" />
+        </activity>
+        <activity android:name=".Deliverman_control_views.DelivermanEmailActivity"
+            android:parentActivityName=".LoginActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".LoginActivity" />
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:parentActivityName=".DeliverMainActivity">
