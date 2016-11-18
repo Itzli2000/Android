@@ -57,6 +57,7 @@ public class    HomeFragment extends Fragment {
                 textView.setText(String.format("%02d",v)+":"+String.format("%02d",va));
 
                 if(v == 3 && va == 59){
+                    textView.setBackgroundColor(getResources().getColor(R.color.orange));
                     dialog();
                 }
                 
