@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.tesca.dabbaapp.Deliverman_control_views.DelivermanEmailActivity;
 
 public class DeliverMainActivity extends AppCompatActivity {
 

@@ -23,26 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        //Jerarquia padre para DeliveryID
-        <activity
-            android:name=".DeliverIDActivity"
-            android:parentActivityName=".Deliverman_control_views.DelivermanEmailActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Deliverman_control_views.DelivermanEmailActivity" />
-        </activity>
         //Jerarquia padre para Deliverman Login
-        <activity
-            android:name=".Deliverman_control_views.DelivermanEmailActivity"
-            android:parentActivityName=".DeliverMainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".DeliverMainActivity" />
-        </activity>
-        <activity
-            android:name=".ReferenciaActivity"
-            android:label="@string/title_activity_referencia"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Deliverman_control_views.DeliverNavigationActivity"
             android:label="@string/title_activity_deliver_navigation"
@@ -68,10 +49,16 @@
             android:required="true" />
 
         <activity android:name=".Deliverman_control_views.DelivermanGoogleActivity" />
+        <activity android:name=".Deliverman_control_views.DelivermanEmailActivity" />
         <activity
             android:name=".LoginActivity"
+            android:parentActivityName=".DeliverMainActivity">
             android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DeliverMainActivity" />
+        </activity>
     </application>
 
 </manifest>
