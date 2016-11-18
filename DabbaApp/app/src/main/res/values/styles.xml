@@ -23,6 +23,12 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
+    <style name="RaisedButtonGrey" parent="Theme.AppCompat.Light">
+        <item name="colorButtonNormal">@color/secondary_text</item>
+        <item name="colorControlHighlight">@color/grey_300</item>
+        <item name="android:textColor">@android:color/primary_text_dark</item>
+    </style>
+
     <style name="EditTextWhite" parent="TextAppearance.AppCompat">
         <item name="android:textColorHint">@color/editTextColorWhite</item>
         <item name="android:textSize">@dimen/edittext_textsize_login</item>

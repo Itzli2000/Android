@@ -13,7 +13,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.tesca.dabbaapp.DelivermanEmailActivity;
+import com.tesca.dabbaapp.LoginActivity;
 import com.tesca.dabbaapp.R;
 
 public class DeliverNavigationActivity extends AppCompatActivity
@@ -70,7 +70,7 @@ public class DeliverNavigationActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.logout) {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(DeliverNavigationActivity.this, DelivermanEmailActivity.class));
+            startActivity(new Intent(DeliverNavigationActivity.this, LoginActivity.class));
             return true;
         }
 

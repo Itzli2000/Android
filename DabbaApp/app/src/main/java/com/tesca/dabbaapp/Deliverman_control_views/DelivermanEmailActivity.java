@@ -1,4 +1,4 @@
-package com.tesca.dabbaapp;
+package com.tesca.dabbaapp.Deliverman_control_views;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -17,7 +17,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.tesca.dabbaapp.Deliverman_control_views.DeliverNavigationActivity;
+import com.tesca.dabbaapp.R;
 
 public class DelivermanEmailActivity extends AppCompatActivity {
 

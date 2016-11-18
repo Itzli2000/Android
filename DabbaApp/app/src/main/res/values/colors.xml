@@ -13,4 +13,6 @@
     <color name="color_divider">#BDBDBD</color>
     <color name="editTextColorWhite">#FFFFFF</color>
     <color name="editTextColorBlack">#000000</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_300">#E0E0E0</color>
 </resources>
