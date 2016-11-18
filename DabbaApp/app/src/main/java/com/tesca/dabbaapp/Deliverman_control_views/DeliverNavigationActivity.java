@@ -74,7 +74,7 @@ public class DeliverNavigationActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.logout) {
             FirebaseAuth.getInstance().signOut();
-            Auth.GoogleSignInApi.signOut(mGoogleApiClient);
+            //Auth.GoogleSignInApi.signOut(mGoogleApiClient);
             startActivity(new Intent(DeliverNavigationActivity.this, LoginActivity.class));
             return true;
         }
