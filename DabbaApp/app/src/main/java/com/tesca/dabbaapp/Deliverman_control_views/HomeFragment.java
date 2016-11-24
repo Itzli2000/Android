@@ -1,18 +1,26 @@
 package com.tesca.dabbaapp.Deliverman_control_views;
 
 import android.app.Notification;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.NotificationCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.gms.maps.SupportMapFragment;
+import com.tesca.dabbaapp.MapsActivity;
 import com.tesca.dabbaapp.R;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -21,6 +29,7 @@ import java.util.TimerTask;
 /**
  * A simple {@link Fragment} subclass.
  */
+
 public class    HomeFragment extends Fragment {
 
     public HomeFragment() {
@@ -48,7 +57,7 @@ public class    HomeFragment extends Fragment {
 
 
         textView = (TextView)root.findViewById(R.id.chronometer2);
-        textView.setBackgroundColor(getResources().getColor(R.color.DarckGreen));
+        textView.setBackgroundColor(Color.GREEN);
         new CountDownTimer(horaActual, 1000) {
 
             public void onTick(long millisUntilFinished) {
@@ -57,7 +66,7 @@ public class    HomeFragment extends Fragment {
                 textView.setText(String.format("%02d",v)+":"+String.format("%02d",va));
 
                 if(v == 3 && va == 59){
-                    textView.setBackgroundColor(getResources().getColor(R.color.orange));
+                    textView.setBackgroundColor(Color.YELLOW);
                     dialog();
                 }
                 
@@ -68,7 +77,7 @@ public class    HomeFragment extends Fragment {
 
             public void onFinish() {
                 textView.setTextSize(40);
-                textView.setBackgroundColor(0xfff00000);
+                textView.setBackgroundColor(Color.RED);
                 textView.setText("Fin del tiempo");
             }
         }.start();
@@ -113,7 +122,6 @@ public class    HomeFragment extends Fragment {
 
 
     }
-
 
 }
 

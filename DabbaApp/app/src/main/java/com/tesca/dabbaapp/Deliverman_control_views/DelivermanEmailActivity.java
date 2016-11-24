@@ -17,6 +17,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.tesca.dabbaapp.MapsActivity;
 import com.tesca.dabbaapp.R;
 
 public class DelivermanEmailActivity extends AppCompatActivity {
@@ -53,7 +54,8 @@ public class DelivermanEmailActivity extends AppCompatActivity {
                 if(firebaseAuth.getCurrentUser() != null){
 
                     // User is signed in
-                    startActivity(new Intent(DelivermanEmailActivity.this, DeliverNavigationActivity.class));
+                    startActivity(new Intent(DelivermanEmailActivity.this, MapsActivity.class));
+                                                                    //Cambiar por DaliverNavigation
 
                 }
             }

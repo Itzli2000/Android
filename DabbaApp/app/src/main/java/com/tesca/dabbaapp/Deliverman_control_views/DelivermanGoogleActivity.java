@@ -25,6 +25,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.tesca.dabbaapp.MapsActivity;
 import com.tesca.dabbaapp.R;
 
 public class DelivermanGoogleActivity extends AppCompatActivity implements
@@ -84,7 +85,7 @@ public class DelivermanGoogleActivity extends AppCompatActivity implements
             Toast.makeText(this, "Welcome " + user.getEmail(), Toast.LENGTH_SHORT).show();
 
             // Go back to the main activity
-            startActivity(new Intent(this, DeliverNavigationActivity.class));
+            startActivity(new Intent(this, MapsActivity.class));
         }
     }
 
@@ -139,7 +140,8 @@ public class DelivermanGoogleActivity extends AppCompatActivity implements
                             Toast.makeText(DelivermanGoogleActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         } else {
-                            startActivity(new Intent(DelivermanGoogleActivity.this, DeliverNavigationActivity.class));
+                            startActivity(new Intent(DelivermanGoogleActivity.this, MapsActivity.class));
+                                                                                //Cambiar por DaliverNavigation
                             finish();
                         }
                     }

@@ -3,7 +3,7 @@
     <color name="colorPrimary">#4caf50</color>
     <color name="colorPrimaryDark">#388e3c</color>
     <color name="colorToolbar">#1b5e20</color>
-    <color name="DarckGreen">#006400</color>
+    <color name="DarckGreen">#ffffff</color>
     <color name="colorAccent">#ffab40</color>
     <color name="colorLightAccent">#ffd180</color>
     <color name="colorLightPrimary">#c8e6c9</color>
@@ -16,4 +16,5 @@
     <color name="grey_100">#F5F5F5</color>
     <color name="grey_300">#E0E0E0</color>
     <color name="orange">#ffa500</color>
+    <color name="trans">#CCFFFFFF</color>
 </resources>

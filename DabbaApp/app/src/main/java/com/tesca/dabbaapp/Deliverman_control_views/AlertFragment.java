@@ -2,6 +2,7 @@ package com.tesca.dabbaapp.Deliverman_control_views;
 
 
 import android.app.Dialog;
+import android.app.FragmentManager;
 import android.content.DialogInterface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -40,5 +41,4 @@ public class AlertFragment extends DialogFragment {
         // Inflate the layout for this fragment
         return builder.create();
     }
-
 }

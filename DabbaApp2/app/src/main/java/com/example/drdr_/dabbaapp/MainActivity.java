@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ProgressDialog pDialog;
     private String TAG = "TAG";
-    private static String url = "http://192.168.1.65:8080/api/v1/customer-orders/?format=json";
+    private static String url = "http://192.168.0.15:8080/api/v1/customer-orders/?format=json";
     ArrayList<HashMap<String, String>> contactList;
     private ListView lv;
 
@@ -78,10 +78,9 @@ public class MainActivity extends AppCompatActivity {
                     for (int i = 0; i < results.length(); i++) {
                         JSONObject c = results.getJSONObject(i);
 
-                        String id = c.getString("id");
+
                         String created_at = c.getString("created_at");
-                        String delivery_date = c.getString("delivery_date");
-                        
+
 
 
                         // Phone node is JSON Object
