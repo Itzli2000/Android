@@ -148,7 +148,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             return;
         }
 
-        float zoomlevel = 40;
+        float zoomlevel = 30;
 
 
         // Add a marker

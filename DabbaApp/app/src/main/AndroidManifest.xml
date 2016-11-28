@@ -29,20 +29,6 @@
             android:label="@string/title_activity_deliver_navigation"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Deliverman_control_views.DelivermanGoogleActivity"
-            android:parentActivityName=".LoginActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".LoginActivity" />
-        </activity>
-        <activity
-            android:name=".Deliverman_control_views.DelivermanEmailActivity"
-            android:parentActivityName=".LoginActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".LoginActivity" />
-        </activity>
-        <activity
             android:name=".LoginActivity"
             android:parentActivityName=".DeliverMainActivity">
             android:label="@string/title_activity_login"

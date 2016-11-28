@@ -19,23 +19,74 @@
         android:layout_marginBottom="50dp"
         />
 
-    <Button
-        android:id="@+id/emaillog"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/deliverEmail"
-        android:layout_marginBottom="20dp"
-        android:onClick="goEmailLog"
-        android:theme="@style/RaisedButtonDark"
-        />
 
-    <Button
-        android:id="@+id/googlelog"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:theme="@style/EditTextBlack"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/deliver_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_user"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:theme="@style/EditTextBlack"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/deliver_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:theme="@style/RaisedButtonDark"
+                android:enabled="true"
+                android:textAlignment="center"
+                android:text="@string/btn_Log"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="@string/deliverGoogle"
+        android:visibility="visible"
         android:onClick="GoGoogleLog"
-        android:theme="@style/RaisedButtonDark"
+        android:textAlignment="center"
+        android:theme="@style/RaisedButtonGrey"
         />
 
 </LinearLayout>
