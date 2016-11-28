@@ -60,16 +60,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         fab2.setOnClickListener(new View.OnClickListener(){
             public void onClick (View v){
-                /*Intent intent = new Intent(MapsActivity.this, EntregasActivity.class);
-                startActivity(intent);*/
+                Intent intent = new Intent(MapsActivity.this, EntregasActivity.class);
+                startActivity(intent);
                 Toast.makeText(getApplicationContext(),"Entregas",Toast.LENGTH_LONG).show();
             }
         });
 
         fab3.setOnClickListener(new View.OnClickListener(){
             public void onClick (View v){
-                /*Intent intent = new Intent(MapsActivity.this, MapaActivity.class);
-                startActivity(intent);*/
+                Intent intent = new Intent(MapsActivity.this, MapsActivity.class);
+                startActivity(intent);
                 Toast.makeText(getApplicationContext(),"Mapa",Toast.LENGTH_LONG).show();
             }
         });
