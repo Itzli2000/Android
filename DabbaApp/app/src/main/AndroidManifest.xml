@@ -25,10 +25,6 @@
         </activity>
         //Jerarquia padre para Deliverman Login
         <activity
-            android:name=".Deliverman_control_views.DeliverNavigationActivity"
-            android:label="@string/title_activity_deliver_navigation"
-            android:theme="@style/AppTheme" />
-        <activity
             android:name=".LoginActivity"
             android:parentActivityName=".DeliverMainActivity">
             android:label="@string/title_activity_login"

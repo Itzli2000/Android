@@ -49,5 +49,7 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="deliverEmail">Ingresa con tu correo</string>
     <string name="deliverGoogle">Ingresa con Google</string>
+    <string name="logout">Cerrar Sesión</string>
+    <string name="map">Mapa</string>
 
 </resources>

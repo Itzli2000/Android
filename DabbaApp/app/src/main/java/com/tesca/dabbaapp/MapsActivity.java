@@ -1,6 +1,7 @@
 package com.tesca.dabbaapp;
 
 import android.app.Notification;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -10,9 +11,10 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.NotificationManagerCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.NotificationCompat;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -21,12 +23,17 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.tesca.dabbaapp.Deliverman_control_views.AlertFragment;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import com.github.clans.fab.FloatingActionMenu;
+import com.github.clans.fab.FloatingActionButton;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+
+    FloatingActionMenu menu;
+    FloatingActionButton fab1, fab2, fab3;
 
     private GoogleMap mMap;
     private String TAG = "Maps_Activity";
@@ -37,6 +44,35 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+        menu = (FloatingActionMenu) findViewById(R.id.menu);
+        fab1 = (FloatingActionButton) findViewById(R.id.menu_item1);
+        fab2 = (FloatingActionButton) findViewById(R.id.menu_item2);
+        fab3 = (FloatingActionButton) findViewById(R.id.menu_item3);
+
+        fab1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                //Auth.GoogleSignInApi.signOut(mGoogleApiClient);
+                startActivity(new Intent(MapsActivity.this, LoginActivity.class));
+            }
+        });
+
+        fab2.setOnClickListener(new View.OnClickListener(){
+            public void onClick (View v){
+                /*Intent intent = new Intent(MapsActivity.this, EntregasActivity.class);
+                startActivity(intent);*/
+                Toast.makeText(getApplicationContext(),"Entregas",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        fab3.setOnClickListener(new View.OnClickListener(){
+            public void onClick (View v){
+                /*Intent intent = new Intent(MapsActivity.this, MapaActivity.class);
+                startActivity(intent);*/
+                Toast.makeText(getApplicationContext(),"Mapa",Toast.LENGTH_LONG).show();
+            }
+        });
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -148,7 +184,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             return;
         }
 
-        float zoomlevel = 30;
+        float zoomlevel = 25;
 
 
         // Add a marker
