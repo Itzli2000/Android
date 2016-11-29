@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionMenu;
 import com.github.clans.fab.FloatingActionButton;
+import com.google.android.gms.auth.api.Auth;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class EntregasActivity extends AppCompatActivity {
@@ -15,10 +16,14 @@ public class EntregasActivity extends AppCompatActivity {
     FloatingActionMenu menu;
     FloatingActionButton fab1, fab2, fab3;
 
+    private FirebaseAuth mFirebaseAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entregas);
+
+        mFirebaseAuth = FirebaseAuth.getInstance();
 
         menu = (FloatingActionMenu) findViewById(R.id.menu);
         fab1 = (FloatingActionButton) findViewById(R.id.menu_item1);
