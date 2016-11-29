@@ -35,6 +35,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     FloatingActionMenu menu;
     FloatingActionButton fab1, fab2, fab3;
 
+    private FirebaseAuth mAuth;
+
     private GoogleMap mMap;
     private String TAG = "Maps_Activity";
     private LatLng destination = new LatLng(19.525170, -99.226120);
@@ -45,6 +47,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
+        mAuth = FirebaseAuth.getInstance();
+
         menu = (FloatingActionMenu) findViewById(R.id.menu);
         fab1 = (FloatingActionButton) findViewById(R.id.menu_item1);
         fab2 = (FloatingActionButton) findViewById(R.id.menu_item2);
@@ -52,7 +56,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         fab1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
+                mAuth.signOut();
                 //Auth.GoogleSignInApi.signOut(mGoogleApiClient);
                 startActivity(new Intent(MapsActivity.this, LoginActivity.class));
             }

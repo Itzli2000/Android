@@ -126,7 +126,6 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/face"
                 fab:fab_label="@string/logout"
-                android:alpha="0.8"
                 fab:fab_size="mini" />
 
             <com.github.clans.fab.FloatingActionButton
@@ -135,7 +134,6 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/moto"
                 fab:fab_label="@string/deliver_list"
-                android:alpha="0.8"
                 fab:fab_size="mini" />
 
             <com.github.clans.fab.FloatingActionButton
@@ -144,7 +142,6 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/map"
                 fab:fab_label="@string/map"
-                android:alpha="0.8"
                 fab:fab_size="mini" />
         </com.github.clans.fab.FloatingActionMenu>
     </RelativeLayout>
