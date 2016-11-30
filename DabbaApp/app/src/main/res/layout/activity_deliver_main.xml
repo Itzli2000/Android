@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.tesca.dabbaapp.DeliverMainActivity"
-    android:background="@drawable/fondo1"
     >
 
     <LinearLayout
@@ -33,7 +32,7 @@
                 android:layout_height="100sp"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                android:textColor="@color/editTextColorWhite"
+                android:textColor="@color/editTextColorBlack"
                 android:gravity="center"
                 android:textAlignment="center"
                 android:text="@string/deliveryman"/>
@@ -47,7 +46,7 @@
                 android:textSize="25sp"
                 android:textAlignment="center"
                 android:gravity="center"
-                android:textColor="@color/editTextColorWhite"
+                android:textColor="@color/editTextColorBlack"
                 android:layout_below="@+id/delivery_text"
                 android:text="@string/delivery_login"
                 />

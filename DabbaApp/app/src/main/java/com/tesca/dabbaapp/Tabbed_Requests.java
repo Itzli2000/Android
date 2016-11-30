@@ -40,6 +40,7 @@ public class Tabbed_Requests extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        setTitle("Contenido de la entrega");
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
 
@@ -73,6 +74,8 @@ public class Tabbed_Requests extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(Tabbed_Requests.this, MainActivity.class);
+            startActivity(intent);
             return true;
         }
 

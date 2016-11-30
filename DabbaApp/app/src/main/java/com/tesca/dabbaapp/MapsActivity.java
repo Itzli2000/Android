@@ -324,6 +324,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         mMap.setMyLocationEnabled(true);
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(destination, 15));
 

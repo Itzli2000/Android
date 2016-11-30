@@ -32,7 +32,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="151dp"
             android:weightSum="1">
 
             <TextView
@@ -77,11 +77,13 @@
                 android:layout_marginLeft="10dp" />
 
             <Button
-                android:text="Button"
+                android:text="@string/map"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button2"
-                android:layout_gravity="right" />
+                android:textAlignment="gravity"
+                android:layout_gravity="right"
+                android:theme="@style/RaisedButtonDark"/>
 
         </LinearLayout>
 

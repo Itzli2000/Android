@@ -24,34 +24,38 @@
         android:layout_alignParentStart="true"
         android:layout_weight="0.85">
 
+
         <fragment
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:map="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/map"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context="com.example.drdr_.dabbaapp.MapsActivity" />
+            tools:context="com.example.drdr_.dabbaapp.MapsActivity"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
-        <RelativeLayout
+        <ScrollView
             android:layout_width="match_parent"
+            android:layout_height="100dp"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:background="@color/colorPrimary"
-            android:layout_height="100dp">
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/colorLightAccent"
+            android:alpha="0.75">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/id"
-                android:textSize="24sp"
-                android:layout_margin="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/id"
+            android:textSize="24sp"
+            android:text="Cliente\n\tPedro Perez\nDirección:\n\t\t--------------------------
+            --------------------------"
+            android:layout_alignBottom="@+id/material_design_android_floating_action_menu"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
-        </RelativeLayout>
+        </ScrollView>
 
         <com.github.clans.fab.FloatingActionMenu
             android:id="@+id/material_design_android_floating_action_menu"
@@ -124,6 +128,7 @@
             android:textSize="24sp"
             android:background="@drawable/circle"
             android:gravity="center_vertical|center_horizontal"
+            android:layout_centerHorizontal="true"
             android:layout_height="80dp"
             android:layout_marginTop="28dp"
             android:layout_width="120dp"
