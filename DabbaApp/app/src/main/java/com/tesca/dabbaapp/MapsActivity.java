@@ -1,15 +1,20 @@
 package com.tesca.dabbaapp;
 
+import android.app.Notification;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.NotificationManagerCompat;
+import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -39,12 +44,15 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
+{
 
     private GoogleMap mMap;
     private String TAG = "Maps_Activity";
@@ -367,6 +375,46 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
         return cal;
+    }
+
+
+    private void dialog() //Metodo para ejecutar el Alertdialog
+    {
+
+        final AlertFragment dialog = new AlertFragment();
+        dialog.show(getSupportFragmentManager(), "dialog");
+        final MediaPlayer mp = MediaPlayer.create(MapsActivity.this, R.raw.alert);
+        mp.start();
+
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+            }
+        });
+
+        final Timer t = new Timer();
+        t.schedule(new TimerTask() {
+            public void run() {
+                dialog.dismiss(); // Cierra el alert dialog
+                t.cancel(); // Detiene el timer para evitar crash report
+            }
+        }, 5000); // Después de 5 segundos se inicia la actividad
+    }
+
+    private void notif()  //Metodo para ejecutar una notificacion local
+    {
+
+        NotificationCompat.Builder  notif = (NotificationCompat.Builder) new NotificationCompat.Builder(this)
+                .setSmallIcon(R.drawable.moto2)
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.moto2))
+                .setContentTitle("Nueva entrega")
+                .setContentText("Revisa la seccion de entregas");
+        notif.setAutoCancel(true);
+        notif.setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_LIGHTS | Notification.DEFAULT_VIBRATE);
+        NotificationManagerCompat notifman = NotificationManagerCompat.from (this);
+        notifman.notify(1, notif.build());
+
     }
 
 }

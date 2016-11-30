@@ -53,21 +53,6 @@
 
         </RelativeLayout>
 
-        <TextView
-            android:text="4:00"
-            android:id="@+id/textView4"
-            android:textSize="24sp"
-            android:background="@drawable/circle"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_height="80dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="24dp"
-            android:layout_width="120dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
         <com.github.clans.fab.FloatingActionMenu
             android:id="@+id/material_design_android_floating_action_menu"
             android:layout_width="wrap_content"
@@ -132,6 +117,19 @@
                 fab:fab_label="@string/map"
                 fab:fab_size="mini" />
         </com.github.clans.fab.FloatingActionMenu>
+
+        <TextView
+            android:text="4:00"
+            android:id="@+id/textView4"
+            android:textSize="24sp"
+            android:background="@drawable/circle"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_height="80dp"
+            android:layout_marginTop="28dp"
+            android:layout_width="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/material_design_android_floating_action_menu"
+            android:layout_alignStart="@+id/material_design_android_floating_action_menu" />
 
 
     </RelativeLayout>
