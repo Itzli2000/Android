@@ -51,5 +51,6 @@
     <string name="deliverGoogle">Ingresa con Google</string>
     <string name="logout">Cerrar Sesión</string>
     <string name="map">Mapa</string>
+    <string name="title_activity_tabbed__requests">Tabbed_Requests\"</string>
 
 </resources>

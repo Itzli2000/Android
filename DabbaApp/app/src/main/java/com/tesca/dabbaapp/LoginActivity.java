@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity implements
                 if(firebaseAuth.getCurrentUser() != null){
 
                     // User is signed in
-                    startActivity(new Intent(LoginActivity.this, MapsActivity.class));
+                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
                     //Cambiar por DaliverNavigation
 
                 }
@@ -202,7 +202,7 @@ public class LoginActivity extends AppCompatActivity implements
                             Toast.makeText(LoginActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         } else {
-                            startActivity(new Intent(LoginActivity.this, MapsActivity.class));
+                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             //Cambiar por DaliverNavigation
                             finish();
                         }
