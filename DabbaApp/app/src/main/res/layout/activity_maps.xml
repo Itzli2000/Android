@@ -72,7 +72,6 @@
             fab:menu_colorNormal="#da3c2f"
             fab:menu_colorPressed="#dc4b3f"
             fab:menu_colorRipple="#99d4d4d4"
-            fab:menu_fab_label="Floating Action Menu"
             fab:menu_fab_size="normal"
             fab:menu_icon="@drawable/fab_add"
             fab:menu_labels_colorNormal="#333"
@@ -121,13 +120,11 @@
             android:textSize="24sp"
             android:background="@drawable/circle"
             android:gravity="center_vertical|center_horizontal"
-            android:layout_centerHorizontal="true"
             android:layout_height="80dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="25dp"
             android:layout_width="120dp"
             android:layout_alignParentTop="true"
-            android:layout_alignLeft="@+id/material_design_android_floating_action_menu"
-            android:layout_alignStart="@+id/material_design_android_floating_action_menu" />
+            android:layout_centerHorizontal="true" />
 
 
     </RelativeLayout>
