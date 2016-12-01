@@ -60,7 +60,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private TextView textView, status_tv, costo_tv, id_tv;
     private FirebaseAuth mAuth;
     FloatingActionMenu materialDesignFAM;
-    FloatingActionButton fab1,fab2,fab3;
+    FloatingActionButton fab1,fab2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +72,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         materialDesignFAM = (FloatingActionMenu) findViewById(R.id.material_design_android_floating_action_menu);
         fab1 = (FloatingActionButton) findViewById(R.id.material_design_floating_action_menu_item1);
         fab2 = (FloatingActionButton) findViewById(R.id.material_design_floating_action_menu_item2);
-        fab3 = (FloatingActionButton) findViewById(R.id.material_design_floating_action_menu_item3);
 
         fab1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -87,13 +86,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 startActivity(intent);
             }
         });
-        fab3.setOnClickListener(new View.OnClickListener(){
-            public void onClick (View v){
-                Intent intent = new Intent(MapsActivity.this, MapsActivity.class);
-                startActivity(intent);
-                Toast.makeText(getApplicationContext(),"Mapa",Toast.LENGTH_LONG).show();
-            }
-        });
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
